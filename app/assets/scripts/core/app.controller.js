@@ -78,7 +78,7 @@
         };
 
         $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
-            $(document).scrollTo(0, 0);
+            $document.scrollTo(0, 0);
         });
 
     }
