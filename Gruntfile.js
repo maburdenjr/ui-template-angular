@@ -67,7 +67,11 @@
                     src: [
                         'app/assets/scripts/core/app.module.js',
                         'app/assets/scripts/core/config.route.js',
-                        'app/assets/scripts/core/app.controller.js'
+                        'app/assets/scripts/core/app.controller.js',
+                        'app/assets/scripts/layout/nav.module.js',
+                        'app/assets/scripts/layout/nav.directive.js',
+                        'app/assets/scripts/layout/ui.module.js',
+                        'app/assets/scripts/layout/ui.directive.js'
                     ],
                     dest: 'app/assets/scripts/ui.js'
                 }
