@@ -57,11 +57,19 @@
                         'app/bower_components/textAngular/dist/textAngular-sanitize.min.js',
                         'app/bower_components/Chart.js/Chart.js',
                         'app/bower_components/angular-chart.js/dist/angular-chart.js',
+                    ],
+                    dest: 'app/assets/scripts/app.js'
+                },
+                ui: {
+                    options: {
+                        separator:';'
+                    },
+                    src: [
                         'app/assets/scripts/core/app.module.js',
                         'app/assets/scripts/core/config.route.js',
                         'app/assets/scripts/core/app.controller.js'
                     ],
-                    dest: 'app/assets/scripts/app.js'
+                    dest: 'app/assets/scripts/ui.js'
                 }
             },
             cssmin: {
