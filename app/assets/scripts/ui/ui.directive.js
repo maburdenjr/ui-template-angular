@@ -6,8 +6,21 @@
         .directive('uiTime', uiTime)
         .directive('uiNotCloseOnClick', uiNotCloseOnClick)
         .directive('slimScroll', slimScroll)
-        .directive('imgHolder', imgHolder);
+        .directive('imgHolder', imgHolder)
+        .directive('imgHover', imgHover)
 
+    function imgHover() {
+        return {
+            restrict: 'C',
+            replace: true,
+            scope: {
+                heading: "@heading",
+                description: "@description",
+                image: "@image"
+            },
+            templateUrl: 'assets/templates/img_hover.html'
+        }
+    }
 
     function uiWave() {
         var directive = {

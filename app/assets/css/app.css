@@ -25680,3 +25680,12 @@ body {
 body .ta-hidden-input {
   display: none;
 }
+body .top-nav .nav-right-placeholder {
+  height: 50px;
+}
+body .page h2.section-header {
+  font-size: 25px;
+  color: #777;
+  font-weight: 400;
+  text-transform: uppercase;
+}

@@ -4,4 +4,20 @@ body {
     display:none;
   }
 
+  .top-nav {
+    .nav-right-placeholder {
+      height: 50px;
+    }
+  }
+  .page {
+    h2 {
+      &.section-header {
+        font-size: 25px;
+        color: #777;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+
 }

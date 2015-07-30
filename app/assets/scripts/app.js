@@ -46056,9 +46056,30 @@ angular.module('ui.router.state')
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);;(function () {
     'use strict';
-    angular.module('app', ['ngAnimate','ngAria','ngMaterial', 'ui.router']);
-})();
 
+    angular.module('app', [
+        // Angular modules
+        'ngAnimate'
+        ,'ngAria'
+
+        // 3rd Party Modules
+        ,'ngMaterial'
+        ,'ui.router'
+        ,'ui.bootstrap'
+        ,'easypiechart'
+        ,'ui.tree'
+        ,'ngMap'
+        ,'ngTagsInput'
+        ,'textAngular'
+        ,'angular-loading-bar'
+        ,'duScroll'
+
+        // Custom module
+        ,'app.nav'
+        ,'app.ui'
+    ]);
+
+})();
 ;(function () {
     'use strict';
 
@@ -46067,7 +46088,7 @@ angular.module('ui.router.state')
             var routes, setRoutes;
 
             routes = [
-                'index'
+                'index', 'uikit/components'
             ]
 
             setRoutes = function(route) {
@@ -46172,7 +46193,7 @@ angular.module('ui.router.state')
         };
 
         $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
-            $document.scrollTo(0, 0);
+            $("body").animate({scrollTop: "0px"}, "slow");
         });
 
     }

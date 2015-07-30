@@ -6,7 +6,7 @@
             var routes, setRoutes;
 
             routes = [
-                'index'
+                'index', 'uikit/components'
             ]
 
             setRoutes = function(route) {
