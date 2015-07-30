@@ -16,7 +16,7 @@
                         'app/assets/css/main.css'],
                     dest: 'app/assets/css/app.css'
                 },
-                vendor: {
+                app: {
                     options: {
                         separator:';'
                     },
@@ -26,14 +26,9 @@
                         'app/bower_components/angular-animate/angular-animate.js',
                         'app/bower_components/angular-aria/angular-aria.js',
                         'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-                    ],
-                    dest: 'app/assets/scripts/vendor.js'
-                },
-                ui: {
-                    options: {
-                        separator:';'
-                    },
-                    src: [
+                        'app/assets/scripts/core/app.module.js',
+                        'app/assets/scripts/core/config.route.js',
+                        'app/assets/scripts/core/app.controller.js',
                         'app/bower_components/angular-material/angular-material.js',
                         'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
                         'app/bower_components/jquery-steps/build/jquery.steps.js',
@@ -61,19 +56,10 @@
                         'app/bower_components/textAngular/dist/textAngular.min.js',
                         'app/bower_components/textAngular/dist/textAngular-sanitize.min.js',
                         'app/bower_components/Chart.js/Chart.js',
-                        'app/bower_components/angular-chart.js/dist/angular-chart.js'
-                    ],
-                    dest: 'app/assets/scripts/ui.js'
-                },
-                app: {
-                    options: {
-                        separator:';'
-                    },
-                    src: [
+                        'app/bower_components/angular-chart.js/dist/angular-chart.js',
                         'app/assets/scripts/core/app.module.js',
                         'app/assets/scripts/core/config.route.js',
                         'app/assets/scripts/core/app.controller.js'
-
                     ],
                     dest: 'app/assets/scripts/app.js'
                 }
@@ -89,26 +75,15 @@
                 options: {
                     mangle: false
                 },
-                ui: {
-                    files: {
-                        'app/assets/scripts/ui.min.js': ['app/assets/scripts/ui.js']
-                    }
-                },
                 app: {
                     files: {
                         'app/assets/scripts/app.min.js': ['app/assets/scripts/app.js']
                     }
                 }
-                ,
-                vendor: {
-                    files: {
-                        'app/assets/scripts/vendor.min.js': ['app/assets/scripts/vendor.js']
-                    }
-                }
             }
         });
 
-        grunt.registerTask('default', ['concat:css', 'concat:vendor', 'concat:ui', 'concat:app', 'cssmin:css', 'uglify:ui', 'uglify:app', 'uglify:vendor']);
+        grunt.registerTask('default', ['concat:css', 'concat:app', 'cssmin:css', 'uglify:app']);
 
     }
 })();
